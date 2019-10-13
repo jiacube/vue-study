@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-10-12 10:03:27
- * @LastEditTime: 2019-10-13 19:55:01
+ * @LastEditTime: 2019-10-13 22:59:43
  * @LastEditors: Please set LastEditors
  -->
 <template>
@@ -51,7 +51,7 @@
       submit(){
         this.$refs.loginForm.validate(isValidate => {
           const comp = create(Notice,{
-            title:"测试12321",
+            title:"123测试12321",
             message: isValidate ? "请求登录" : "校验失败",
             duration:3000
           })
