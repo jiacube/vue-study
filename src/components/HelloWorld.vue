@@ -2,11 +2,11 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-10-08 09:58:28
- * @LastEditTime: 2019-10-12 09:39:00
+ * @LastEditTime: 2019-10-14 09:27:03
  * @LastEditors: Please set LastEditors
  -->
 <template>
-  <div class="hello">
+  <div class="hello"  @click="saySth2Bro">
     <h1>{{ $attrs.foo }}</h1>
     <div>{{xx}}</div>
     <div>{{ss}}</div>
@@ -28,10 +28,18 @@ export default {
     }
   },
   mounted(){
-    this.$on("foo",()=>{
-      console.log("兄弟组件通信$on和$emit");
+    //通过共同的父组件做中介
+    this.$parent.$on("foo",comp => {
+      if(comp !== this){
+        console.log("兄弟组件通信$on和$emit");
+      }
     });
-    this.$emit("foo");
+  },
+  methods: {
+    saySth2Bro() {
+      // 父组件派发消息可以在所有兄弟内监听
+      this.$parent.$emit("foo", this);
+    }
   }
 }
 </script>

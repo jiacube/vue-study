@@ -2,14 +2,14 @@
  * @Description: vue入门
  * @Author: jxf
  * @Date: 2019-10-08 09:58:28
- * @LastEditTime: 2019-10-12 10:27:29
+ * @LastEditTime: 2019-10-14 09:32:22
  * @LastEditors: Please set LastEditors
  -->
 <template>
   <div id="app">
    <KFormTest></KFormTest>
-  <!-- <HelloWorld foo="特性$attrs组件通信" ref="hw"></HelloWorld> -->
-  <!-- <HelloWorld></HelloWorld> -->
+  <HelloWorld foo="特性$attrs组件通信" ref="hw"></HelloWorld>
+  <HelloWorld></HelloWorld>
   <!-- <communicate></communicate> -->
     <!-- <router-view/> -->
   </div>
