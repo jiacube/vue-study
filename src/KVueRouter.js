@@ -2,12 +2,13 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-10-14 16:02:26
- * @LastEditTime: 2019-10-14 17:11:44
+ * @LastEditTime: 2019-10-14 17:31:37
  * @LastEditors: Please set LastEditors
  */
 let Vue;
 // 声明Router类
 export default class KVueRouter{
+
   constructor(options){
           // 1. 解析route配置，生成map
         this.$options = options;
